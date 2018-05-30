@@ -9,7 +9,7 @@ I wanted:
  * Simple (no external connections) resolving of data
  * To have the GraphQL Inspector available
  
-### To Use
+# To Use
 1. Install Node 8.10 (latest version of node supported by AWS at the time of this README)
 2. Install Serverless
 3. Set up your AWS Provider Credentials
