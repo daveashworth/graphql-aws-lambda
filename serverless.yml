@@ -1,5 +1,5 @@
 
-service: erpv
+service: graphql-aws-lambda
 
 provider:
   name: aws
@@ -7,7 +7,7 @@ provider:
 
 functions:
   GraphQL:
-    handler: handler.graphqlHandler
+    handler: src/handler.graphqlHandler
 
     events:
       - http:
@@ -18,7 +18,7 @@ functions:
           method: post
 
   GraphQLInspector:
-    handler: handler.graphiqlHandler
+    handler: src/handler.graphiqlHandler
 
     events:
       - http:
