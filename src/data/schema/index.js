@@ -1,6 +1,7 @@
 const { makeExecutableSchema } = require("graphql-tools")
 const fs = require("fs")
 
+// this is required to allow importing of .graphql extensions
 require.extensions[".graphql"] = (module, filename) => {
   module.exports = fs.readFileSync(filename, "utf8")
 }
