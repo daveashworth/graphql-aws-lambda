@@ -1,0 +1,26 @@
+
+service: erpv
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  GraphQL:
+    handler: handler.graphqlHandler
+
+    events:
+      - http:
+          path: graphql
+          method: get
+      - http:
+          path: graphql
+          method: post
+
+  GraphQLInspector:
+    handler: handler.graphiqlHandler
+
+    events:
+      - http:
+          path: graphiql
+          method: get

@@ -1,0 +1,5 @@
+type Query {
+  greeting(
+    firstName: String
+  ): Greeting
+}
